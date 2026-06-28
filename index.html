@@ -70,7 +70,7 @@
             font-style: italic;
         }
 
-        .abstract, .disclaimer {
+        .abstract, .disclaimer, .tldr {
             background-color: var(--panel-bg);
             border-left: 4px solid var(--accent-blue);
             padding: 20px;
@@ -78,12 +78,36 @@
             font-size: 1rem;
         }
 
-        .abstract h2, .disclaimer h2 {
+        .abstract h2, .disclaimer h2, .tldr h2 {
             margin-top: 0;
             font-size: 1.15rem;
             color: var(--text-color);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .flow-step {
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .flow-arrow {
+            color: var(--accent-blue);
+            font-weight: 700;
         }
 
         h2.section-title {
@@ -220,9 +244,26 @@
         <p>This page presents a hypothetical synthetic biology and material-science design for portfolio and educational purposes. Project Metallophyte-Armor has not been physically engineered, tested, or validated by me. The figures are reference visuals or conceptual placeholders and should not be interpreted as experimental data produced by this project.</p>
     </div>
 
+    <div class="tldr">
+        <h2>Mechanism Summary</h2>
+        <p>Metallophyte-Armor proposes a pine-based system that captures copper from controlled soil environments, transports it safely through vascular tissue, and immobilizes it mainly inside developing wood cell walls instead of needles, bark surfaces, or living photosynthetic tissue.</p>
+        <div class="flow">
+            <span class="flow-step">Copper-rich soil</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Root uptake</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Chelated transport</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Xylem capture</span>
+            <span class="flow-arrow">→</span>
+            <span class="flow-step">Mineralized wood wall</span>
+        </div>
+    </div>
+
     <div class="abstract">
         <h2>Abstract</h2>
-        <p>Timber architecture is increasingly important for low-carbon construction, but biological degradation, dimensional instability, insect boring, and fungal colonization remain major limitations for long-term outdoor use. Conventional copper-based wood preservatives can protect lumber after harvest, but they require industrial treatment and raise questions about leaching, ecological exposure, and end-of-life handling. Project Metallophyte-Armor proposes a speculative alternative: a living <em>Pinus</em> matrix engineered to accumulate and immobilize copper ions during growth through a synthetic biomineralization peptide expressed in vascular xylem and cambial tissues. The proposed peptide would function as a high-affinity ligand for Cu<sup>2+</sup> translocated from the rhizosphere, guiding local copper retention and micro-crystalline deposition within the cellulose-rich cell-wall framework. The intended outcome is a biologically mineralized timber precursor with increased resistance to fungal colonization, reduced suitability for xylophagous invertebrates, and improved local stiffness. This proposal treats the system as a research direction rather than an established organism, with emphasis on transport feasibility, metal toxicity thresholds, wood microstructure, and architectural risk assessment.</p>
+        <p>Timber architecture is increasingly important for low-carbon construction, but biological degradation, insect boring, and fungal colonization remain major limitations for long-term outdoor use. Conventional copper-based wood preservatives can protect lumber after harvest, but they require industrial treatment and raise concerns about leaching, worker exposure, disposal, and accidental burning. Project Metallophyte-Armor proposes a speculative alternative: a living <em>Pinus</em> matrix engineered to sequester copper ions during growth through a synthetic biomineralization peptide expressed primarily in vascular xylem and cambial wood-forming tissues.</p>
+        <p>The proposed peptide would act as a high-affinity ligand for Cu<sup>2+</sup> translocated from the rhizosphere, guiding copper retention into developing secondary cell walls rather than allowing broad distribution into needles or sensitive photosynthetic tissues. The intended outcome is a biologically mineralized timber precursor with improved resistance to fungal colonization, reduced suitability for xylophagous invertebrates, and possible local increases in density and compressive performance. The project is framed as a phased research concept, with major unresolved questions involving foliar copper exclusion, phytotoxicity during transport, soil depletion, machining difficulty, electrical behavior, fire safety, and end-of-life handling.</p>
     </div>
 
     <h2 class="section-title">Methodological Specifications</h2>
@@ -235,18 +276,18 @@
             </div>
             <div class="card-content">
                 <h3>1. Vascular Transport & Peptide Capture</h3>
-                <p>The primary design module introduces a synthetic gene encoding an artificial copper-binding biomineralization peptide into vascular and cambial tissue lineages of a <em>Pinus</em> model. The peptide is proposed to act as a localized ligand for Cu<sup>2+</sup> ions entering the tree through root uptake and xylem translocation. Rather than allowing free copper to diffuse broadly through metabolically sensitive tissues, the system is designed around compartmentalized binding within developing wood-forming regions. The central hypothesis is that ligand-guided sequestration could increase copper retention in structural xylem while limiting uncontrolled cytosolic exposure.</p>
+                <p>The first design module introduces a synthetic gene encoding an artificial copper-binding biomineralization peptide into vascular and cambial tissue lineages of a <em>Pinus</em> model. Because free copper can damage living cells, the proposal requires a transport-buffering layer before mineral deposition occurs. Cu<sup>2+</sup> would be chelated during uptake and translocation through metal-binding ligands, phytochelatin-like buffering, metallothionein-like storage behavior, and vacuolar sequestration in non-target tissues. The engineered peptide would then enrich copper capture mainly in developing xylem walls, reducing exposure in needles and actively dividing tissues.</p>
             </div>
         </div>
 
         <div class="card">
             <div class="img-wrapper">
                 <img src="2.png" alt="Mineral or nanoparticle coating on wood structure">
-                <div class="figure-caption">Figure 2. Mineralized or nanoparticle-treated wood surface used as a visual reference for in-wall deposition and surface densification.</div>
+                <div class="figure-caption">Figure 2. Mineralized or particle-treated wood surface used as a visual reference for controlled deposition and surface densification.</div>
             </div>
             <div class="card-content">
                 <h3>2. In-Vivo Crystallization</h3>
-                <p>Once bound by the engineered peptide, copper ions are proposed to nucleate into a dense micro-crystalline phase inside the cellulose, hemicellulose, and lignin framework of developing secondary cell walls. This module is inspired by biomineralized natural materials in which organic matrices guide inorganic deposition. In the Metallophyte-Armor concept, the xylem wall is treated as a biological scaffold for controlled mineral loading. The design does not assume bulk metallic copper formation; instead, it proposes localized copper-rich crystalline or coordination-complex deposits that could increase density and alter the chemical environment inside timber fibers.</p>
+                <p>Once captured in wood-forming tissues, copper is proposed to become immobilized as copper-rich coordination complexes or micro-crystalline deposits within the cellulose, hemicellulose, and lignin framework of the secondary cell wall. This does not imply bulk metallic copper formation. Instead, the project treats the wood wall as a biological scaffold where organic peptides influence inorganic deposition at low to moderate loading levels. The design goal is chemical fixation and localized densification, not uncontrolled metal saturation throughout the entire organism.</p>
             </div>
         </div>
 
@@ -256,8 +297,8 @@
                 <div class="figure-caption">Figure 3. Fungal colonization of wood used as a reference for the biological degradation pathway targeted by copper-based defense.</div>
             </div>
             <div class="card-content">
-                <h3>3. Passive Invertebrate Toxicity & Antifungal Prophylaxis</h3>
-                <p>Copper compounds are widely associated with wood preservation because they can inhibit decay organisms and reduce biological attack under controlled treatment conditions. This project extends that principle into a living-growth model by proposing copper accumulation before harvest. The resulting wood would be expected to create a chemically unfavorable microenvironment for fungal hyphae and wood-boring invertebrates. A rigorous version of this hypothesis would require dose-response testing, leaching analysis, and organism-specific toxicity thresholds. The proposal therefore frames antifungal and insect-deterrent effects as measurable research objectives, not as guaranteed complete sterilization or universal toxicity.</p>
+                <h3>3. Passive Invertebrate Deterrence & Antifungal Prophylaxis</h3>
+                <p>Copper compounds are widely associated with wood preservation because they can inhibit decay organisms under controlled treatment conditions. This proposal extends that principle into a living-growth model by asking whether copper-enriched xylem could create a chemically unfavorable microenvironment for fungal hyphae and wood-boring invertebrates. The effect is framed as dose-dependent deterrence, not instant toxic shock or complete sterilization. A realistic study would require fungal growth assays, insect feeding trials, leaching tests, and comparison against untreated pine and conventional copper-treated lumber.</p>
             </div>
         </div>
 
@@ -268,7 +309,7 @@
             </div>
             <div class="card-content">
                 <h3>4. Mechanical Reinforcement & Material Yield</h3>
-                <p>The mechanical objective is to test whether mineral deposition inside the wood cell-wall architecture could improve local compressive yield, indentation resistance, and dimensional stability without making the material brittle. Pine wood strength is governed by its hierarchical structure, including tracheid orientation, cell-wall thickness, density, moisture content, and microfibril angle. Metallophyte-Armor proposes that controlled copper-rich deposition may act as a densifying phase within this hierarchy. However, high mineral loading could also reduce toughness, increase crack sensitivity, or interfere with normal tree growth, making mechanical validation a central requirement rather than an assumed outcome.</p>
+                <p>The mechanical objective is to test whether mineral deposition inside the wood cell-wall architecture could improve local compressive yield, indentation resistance, and dimensional stability without making the material brittle or difficult to process. Pine wood strength depends on tracheid orientation, cell-wall thickness, density, moisture content, and microfibril angle. Metallophyte-Armor proposes that controlled copper-rich deposition may act as a densifying phase within this hierarchy. However, excessive mineral loading could increase brittleness, accelerate blade wear during milling, alter fastener behavior, or reduce normal lumber workability.</p>
             </div>
         </div>
 
@@ -278,10 +319,35 @@
     <div class="list-panel">
         <p><strong>Environmental and architectural risk assessment framework:</strong></p>
         <ul>
-            <li><strong>Soil Extraction Gradients:</strong> The system depends on copper availability in the rhizosphere. A realistic study would need to define uptake limits, depletion gradients around the root zone, soil chemistry effects, and the risk of mobilizing copper from surrounding ecosystems. The tree should not be treated as an unlimited extraction device; copper uptake would be constrained by transport physiology, local contamination levels, and toxicity thresholds.</li>
-            <li><strong>Localized Tree Cytotoxicity:</strong> Copper is an essential micronutrient but becomes toxic at elevated concentrations. The engineered ligand system is therefore intended to reduce free-ion exposure by binding and immobilizing Cu<sup>2+</sup> in developing xylem. Any real implementation would require monitoring cambial viability, photosynthetic performance, root stress responses, oxidative damage markers, and abnormal growth phenotypes across multiple seasons.</li>
-            <li><strong>Electrical Conductivity Review:</strong> High copper density inside wood raises material-science concerns. If copper-rich phases formed continuous conductive pathways, lumber could display altered electrical behavior compared with untreated timber. This would require resistivity testing under dry, humid, and water-saturated conditions, especially before architectural use near wiring, lightning exposure, or embedded sensors.</li>
-            <li><strong>Fire and Heat-Transfer Hazards:</strong> Mineral loading may change thermal conductivity, char formation, smoke chemistry, and ignition behavior. Although copper itself is not an organic fuel, copper-rich deposits could alter heat distribution through the wood matrix. A responsible design program would require cone calorimetry, smoke analysis, structural fire testing, and end-of-life disposal review before any claim of architectural safety.</li>
+            <li><strong>Needle Drop and Foliar Copper Exclusion:</strong> Pine needles are shed over time, so copper accumulation in foliage would create a contaminated litter layer and could damage soil fungi, bacteria, seedling recruitment, and native undergrowth. The design therefore requires xylem-biased copper capture and active monitoring of needles, bark, roots, and litter. A successful system would need to prove that most copper is retained in harvestable wood rather than returned to the soil surface through seasonal needle fall.</li>
+
+            <li><strong>Phytotoxicity During Transport:</strong> Copper is an essential micronutrient, but excess free copper can disrupt chlorophyll function, photosynthesis, enzyme activity, and oxidative balance. The proposal therefore cannot rely only on final cell-wall biomineralization. It must include chelated transport, vacuolar buffering, metallothionein-like binding, phytochelatin-like detoxification, and strict expression control in vascular tissues. Plant survival would need to be measured through chlorophyll content, growth rate, root viability, oxidative stress markers, and photosynthetic performance.</li>
+
+            <li><strong>Soil Depletion and Copper Supply:</strong> Metallophyte-Armor should not be presented as a normal forest tree that endlessly extracts copper from healthy soil. The realistic use case is controlled phytoremediation on copper-enriched or contaminated land, or a closed plantation system with carefully measured copper availability. A mass-balance model would be required to compare copper removed from soil, copper retained in wood, copper lost to litter, and copper remaining bioavailable after harvest.</li>
+
+            <li><strong>Machinability and Tool Wear:</strong> Mineralized timber would likely behave less like standard pine and more like a biological composite. Increased mineral density could dull saw blades, increase dust hazards, damage planer knives, and require carbide or diamond-tipped tooling. A practical material program would need cutting-force measurements, tool-wear trials, dust composition analysis, and cost comparisons against conventional pressure-treated lumber.</li>
+
+            <li><strong>Electrical Conductivity Review:</strong> High copper density inside wood raises electrical safety questions. If copper-rich deposits form connected pathways, the lumber may show altered resistivity, especially under humid or water-saturated conditions. Architectural testing would need to measure electrical resistance across grain directions, moisture states, fastener interfaces, and contact with wiring, lightning exposure, or embedded sensors.</li>
+
+            <li><strong>Fire and End-of-Life Toxicity:</strong> Copper-enriched wood should not be marketed as ordinary burnable biomass. If scrap or structural material is burned, copper-containing smoke, ash, and particulate matter may create disposal and exposure hazards similar to other treated-wood systems. End-of-life plans should require clear labeling, no-burn handling rules, controlled landfill or recovery pathways, and fire testing that measures ignition behavior, smoke chemistry, char formation, and ash toxicity.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">Proposed Phased Testing</h2>
+    <div class="list-panel">
+        <p><strong>Development pathway for validating the concept before any architectural use:</strong></p>
+        <ul>
+            <li><strong>Phase 1 — Bench-Scale Peptide Validation:</strong> Synthesize the proposed copper-binding peptide and test Cu<sup>2+</sup> affinity, binding stability, precipitation behavior, and compatibility with cellulose or lignin-like substrates in vitro.</li>
+
+            <li><strong>Phase 2 — Model Plant Screening:</strong> Test transport and toxicity behavior in a fast-growing model plant before attempting pine. Screening should measure copper localization, leaf accumulation, chlorophyll loss, oxidative stress, root damage, and whether engineered binding reduces free-ion toxicity.</li>
+
+            <li><strong>Phase 3 — Greenhouse <em>Pinus</em> Seedling Trials:</strong> Evaluate controlled copper uptake in pine seedlings under low, moderate, and high copper exposure. The key success criterion is xylem-biased retention without lethal needle accumulation or severe growth suppression.</li>
+
+            <li><strong>Phase 4 — Material Characterization:</strong> Harvest small stem sections and test density, compression, brittleness, moisture behavior, electrical resistivity, cutting resistance, dust composition, and copper leaching under wet-dry cycling.</li>
+
+            <li><strong>Phase 5 — Biological Resistance Testing:</strong> Compare engineered or mineral-loaded wood sections against untreated pine and conventional copper-treated controls using fungal colonization assays and wood-boring insect feeding or avoidance tests.</li>
+
+            <li><strong>Phase 6 — Risk and End-of-Life Review:</strong> Assess needle litter copper return, soil microbiome impact, sawmill safety, fire behavior, ash toxicity, and disposal classification before any claim of ecological or architectural viability.</li>
         </ul>
     </div>
 
@@ -289,11 +355,20 @@
     <div class="list-panel references">
         <ol>
             <li>Alford, É. R., Pilon-Smits, E. A. H., & Paschke, M. W. “Metallophytes: A View from the Rhizosphere.” <em>Plant and Soil</em>, 2010. <a href="https://doi.org/10.1007/s11104-010-0442-3" target="_blank">https://doi.org/10.1007/s11104-010-0442-3</a></li>
+
             <li>Awa, S. H., & Hadibarata, T. “Removal of Heavy Metals in Contaminated Soil by Phytoremediation Mechanism: A Review.” <em>Water, Air, & Soil Pollution</em>, 2020. <a href="https://doi.org/10.1007/s11270-020-4426-0" target="_blank">https://doi.org/10.1007/s11270-020-4426-0</a></li>
+
+            <li>Yruela, I. “Copper in Plants.” <em>Brazilian Journal of Plant Physiology</em>, 2005. <a href="https://doi.org/10.1590/S1677-04202005000100012" target="_blank">https://doi.org/10.1590/S1677-04202005000100012</a></li>
+
+            <li>Hall, J. L. “Cellular Mechanisms for Heavy Metal Detoxification and Tolerance.” <em>Journal of Experimental Botany</em>, 2002. <a href="https://doi.org/10.1093/jexbot/53.366.1" target="_blank">https://doi.org/10.1093/jexbot/53.366.1</a></li>
+
+            <li>Cobbett, C. S. “Phytochelatins and Their Roles in Heavy Metal Detoxification.” <em>Plant Physiology</em>, 2000. <a href="https://doi.org/10.1104/pp.123.3.825" target="_blank">https://doi.org/10.1104/pp.123.3.825</a></li>
+
             <li>Lebow, S. T. “Alternatives to Chromated Copper Arsenate for Residential Construction.” USDA Forest Products Laboratory, 2004. <a href="https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf" target="_blank">https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf</a></li>
+
             <li>Freeman, M. H., & McIntyre, C. R. “A Comprehensive Review of Copper-Based Wood Preservatives.” <em>Forest Products Journal</em>, 2008.</li>
-            <li>Orrego, S. et al. “Bioinspired Materials with Self-Adaptable Mechanical Properties.” <em>Advanced Materials</em>, 2020. <a href="https://doi.org/10.1002/adma.201907047" target="_blank">https://doi.org/10.1002/adma.201907047</a></li>
-            <li>Amando de Barros, J. O., Schwiedrzik, J., & Wittel, F. K. “Resolving Discrepancies in Wood Micromechanics: Strain-Mapped Compression of Tracheid Wall Micropillars.” <em>arXiv</em>, 2025. <a href="https://arxiv.org/abs/2506.11177" target="_blank">https://arxiv.org/abs/2506.11177</a></li>
+
+            <li>Forest Products Laboratory. <em>Wood Handbook: Wood as an Engineering Material</em>. USDA Forest Service, General Technical Report FPL-GTR-190. <a href="https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr190.pdf" target="_blank">https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr190.pdf</a></li>
         </ol>
     </div>
 
