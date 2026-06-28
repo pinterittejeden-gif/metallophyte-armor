@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Metallophyte-Armor: Genetic Biomineralization in Silvo-Architecture</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #24292f;
+            --text-muted: #57606a;
+            --accent-blue: #0969da;
+            --border-color: #d0d7de;
+            --panel-bg: #f6f8fa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 22px;
+            padding: 8px 13px;
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            background-color: var(--panel-bg);
+            color: var(--text-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .back-home:hover {
+            background-color: #eef2f6;
+            border-color: #afb8c1;
+            text-decoration: none;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--text-color);
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .meta-data {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .abstract, .disclaimer {
+            background-color: var(--panel-bg);
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px;
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+        .abstract h2, .disclaimer h2 {
+            margin-top: 0;
+            font-size: 1.15rem;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h2.section-title {
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-wrapper {
+            background: #fafafa;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: #ffffff;
+        }
+
+        .figure-caption {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .list-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .list-panel ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .list-panel li {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        .references {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .references li {
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a class="back-home" href="https://pinterittejeden-gif.github.io/pinterittejeden-gif/">
+        ← Back to main page
+    </a>
+
+    <header>
+        <h1>Project Metallophyte-Armor: Genetic Biomineralization in Silvo-Architecture</h1>
+        <div class="meta-data">Conceptual Research Proposal & Material Systems Overview // Organism Model: <em>Pinus</em> species</div>
+    </header>
+
+    <div class="disclaimer">
+        <h2>Project Status</h2>
+        <p>This page presents a hypothetical synthetic biology and material-science design for portfolio and educational purposes. Project Metallophyte-Armor has not been physically engineered, tested, or validated by me. The figures are reference visuals or conceptual placeholders and should not be interpreted as experimental data produced by this project.</p>
+    </div>
+
+    <div class="abstract">
+        <h2>Abstract</h2>
+        <p>Timber architecture is increasingly important for low-carbon construction, but biological degradation, dimensional instability, insect boring, and fungal colonization remain major limitations for long-term outdoor use. Conventional copper-based wood preservatives can protect lumber after harvest, but they require industrial treatment and raise questions about leaching, ecological exposure, and end-of-life handling. Project Metallophyte-Armor proposes a speculative alternative: a living <em>Pinus</em> matrix engineered to accumulate and immobilize copper ions during growth through a synthetic biomineralization peptide expressed in vascular xylem and cambial tissues. The proposed peptide would function as a high-affinity ligand for Cu<sup>2+</sup> translocated from the rhizosphere, guiding local copper retention and micro-crystalline deposition within the cellulose-rich cell-wall framework. The intended outcome is a biologically mineralized timber precursor with increased resistance to fungal colonization, reduced suitability for xylophagous invertebrates, and improved local stiffness. This proposal treats the system as a research direction rather than an established organism, with emphasis on transport feasibility, metal toxicity thresholds, wood microstructure, and architectural risk assessment.</p>
+    </div>
+
+    <h2 class="section-title">Methodological Specifications</h2>
+    <div class="grid">
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="1.png" alt="Wood xylem microstructure reference image">
+                <div class="figure-caption">Figure 1. Wood xylem microstructure used as a reference for vascular transport and cell-wall deposition pathways.</div>
+            </div>
+            <div class="card-content">
+                <h3>1. Vascular Transport & Peptide Capture</h3>
+                <p>The primary design module introduces a synthetic gene encoding an artificial copper-binding biomineralization peptide into vascular and cambial tissue lineages of a <em>Pinus</em> model. The peptide is proposed to act as a localized ligand for Cu<sup>2+</sup> ions entering the tree through root uptake and xylem translocation. Rather than allowing free copper to diffuse broadly through metabolically sensitive tissues, the system is designed around compartmentalized binding within developing wood-forming regions. The central hypothesis is that ligand-guided sequestration could increase copper retention in structural xylem while limiting uncontrolled cytosolic exposure.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="2.png" alt="Mineral or nanoparticle coating on wood structure">
+                <div class="figure-caption">Figure 2. Mineralized or nanoparticle-treated wood surface used as a visual reference for in-wall deposition and surface densification.</div>
+            </div>
+            <div class="card-content">
+                <h3>2. In-Vivo Crystallization</h3>
+                <p>Once bound by the engineered peptide, copper ions are proposed to nucleate into a dense micro-crystalline phase inside the cellulose, hemicellulose, and lignin framework of developing secondary cell walls. This module is inspired by biomineralized natural materials in which organic matrices guide inorganic deposition. In the Metallophyte-Armor concept, the xylem wall is treated as a biological scaffold for controlled mineral loading. The design does not assume bulk metallic copper formation; instead, it proposes localized copper-rich crystalline or coordination-complex deposits that could increase density and alter the chemical environment inside timber fibers.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="3.png" alt="Fungal colonization of wood reference image">
+                <div class="figure-caption">Figure 3. Fungal colonization of wood used as a reference for the biological degradation pathway targeted by copper-based defense.</div>
+            </div>
+            <div class="card-content">
+                <h3>3. Passive Invertebrate Toxicity & Antifungal Prophylaxis</h3>
+                <p>Copper compounds are widely associated with wood preservation because they can inhibit decay organisms and reduce biological attack under controlled treatment conditions. This project extends that principle into a living-growth model by proposing copper accumulation before harvest. The resulting wood would be expected to create a chemically unfavorable microenvironment for fungal hyphae and wood-boring invertebrates. A rigorous version of this hypothesis would require dose-response testing, leaching analysis, and organism-specific toxicity thresholds. The proposal therefore frames antifungal and insect-deterrent effects as measurable research objectives, not as guaranteed complete sterilization or universal toxicity.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-wrapper">
+                <img src="4.png" alt="Wood cell-wall structure reference image">
+                <div class="figure-caption">Figure 4. Wood cell-wall and tracheid microstructure used as a reference for evaluating mineral loading and mechanical reinforcement.</div>
+            </div>
+            <div class="card-content">
+                <h3>4. Mechanical Reinforcement & Material Yield</h3>
+                <p>The mechanical objective is to test whether mineral deposition inside the wood cell-wall architecture could improve local compressive yield, indentation resistance, and dimensional stability without making the material brittle. Pine wood strength is governed by its hierarchical structure, including tracheid orientation, cell-wall thickness, density, moisture content, and microfibril angle. Metallophyte-Armor proposes that controlled copper-rich deposition may act as a densifying phase within this hierarchy. However, high mineral loading could also reduce toughness, increase crack sensitivity, or interfere with normal tree growth, making mechanical validation a central requirement rather than an assumed outcome.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Lifecycle & Risk Controls</h2>
+    <div class="list-panel">
+        <p><strong>Environmental and architectural risk assessment framework:</strong></p>
+        <ul>
+            <li><strong>Soil Extraction Gradients:</strong> The system depends on copper availability in the rhizosphere. A realistic study would need to define uptake limits, depletion gradients around the root zone, soil chemistry effects, and the risk of mobilizing copper from surrounding ecosystems. The tree should not be treated as an unlimited extraction device; copper uptake would be constrained by transport physiology, local contamination levels, and toxicity thresholds.</li>
+            <li><strong>Localized Tree Cytotoxicity:</strong> Copper is an essential micronutrient but becomes toxic at elevated concentrations. The engineered ligand system is therefore intended to reduce free-ion exposure by binding and immobilizing Cu<sup>2+</sup> in developing xylem. Any real implementation would require monitoring cambial viability, photosynthetic performance, root stress responses, oxidative damage markers, and abnormal growth phenotypes across multiple seasons.</li>
+            <li><strong>Electrical Conductivity Review:</strong> High copper density inside wood raises material-science concerns. If copper-rich phases formed continuous conductive pathways, lumber could display altered electrical behavior compared with untreated timber. This would require resistivity testing under dry, humid, and water-saturated conditions, especially before architectural use near wiring, lightning exposure, or embedded sensors.</li>
+            <li><strong>Fire and Heat-Transfer Hazards:</strong> Mineral loading may change thermal conductivity, char formation, smoke chemistry, and ignition behavior. Although copper itself is not an organic fuel, copper-rich deposits could alter heat distribution through the wood matrix. A responsible design program would require cone calorimetry, smoke analysis, structural fire testing, and end-of-life disposal review before any claim of architectural safety.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title">References</h2>
+    <div class="list-panel references">
+        <ol>
+            <li>Alford, É. R., Pilon-Smits, E. A. H., & Paschke, M. W. “Metallophytes: A View from the Rhizosphere.” <em>Plant and Soil</em>, 2010. <a href="https://doi.org/10.1007/s11104-010-0442-3" target="_blank">https://doi.org/10.1007/s11104-010-0442-3</a></li>
+            <li>Awa, S. H., & Hadibarata, T. “Removal of Heavy Metals in Contaminated Soil by Phytoremediation Mechanism: A Review.” <em>Water, Air, & Soil Pollution</em>, 2020. <a href="https://doi.org/10.1007/s11270-020-4426-0" target="_blank">https://doi.org/10.1007/s11270-020-4426-0</a></li>
+            <li>Lebow, S. T. “Alternatives to Chromated Copper Arsenate for Residential Construction.” USDA Forest Products Laboratory, 2004. <a href="https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf" target="_blank">https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf</a></li>
+            <li>Freeman, M. H., & McIntyre, C. R. “A Comprehensive Review of Copper-Based Wood Preservatives.” <em>Forest Products Journal</em>, 2008.</li>
+            <li>Orrego, S. et al. “Bioinspired Materials with Self-Adaptable Mechanical Properties.” <em>Advanced Materials</em>, 2020. <a href="https://doi.org/10.1002/adma.201907047" target="_blank">https://doi.org/10.1002/adma.201907047</a></li>
+            <li>Amando de Barros, J. O., Schwiedrzik, J., & Wittel, F. K. “Resolving Discrepancies in Wood Micromechanics: Strain-Mapped Compression of Tracheid Wall Micropillars.” <em>arXiv</em>, 2025. <a href="https://arxiv.org/abs/2506.11177" target="_blank">https://arxiv.org/abs/2506.11177</a></li>
+        </ol>
+    </div>
+
+    <footer>
+        another trophy to my portfolio ig <br>
+        <span style="font-size: 0.75rem; color: #afb5bb;">Pinteritte - conceptual research proposal, writing, and website by me.</span>
+    </footer>
+</div>
+
+</body>
+</html>
