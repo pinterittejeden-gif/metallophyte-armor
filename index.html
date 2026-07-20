@@ -1,386 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Metallophyte-Armor: Genetic Biomineralization in Silvo-Architecture</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #24292f;
-            --text-muted: #57606a;
-            --accent-blue: #0969da;
-            --border-color: #d0d7de;
-            --panel-bg: #f6f8fa;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 850px;
-            width: 100%;
-        }
-
-        .back-home {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 22px;
-            padding: 8px 13px;
-            border: 1px solid var(--border-color);
-            border-radius: 999px;
-            background-color: var(--panel-bg);
-            color: var(--text-color);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .back-home:hover {
-            background-color: #eef2f6;
-            border-color: #afb8c1;
-            text-decoration: none;
-        }
-
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: var(--text-color);
-            margin: 0 0 10px 0;
-            font-weight: 600;
-        }
-
-        .meta-data {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .abstract, .disclaimer, .tldr {
-            background-color: var(--panel-bg);
-            border-left: 4px solid var(--accent-blue);
-            padding: 20px;
-            margin-bottom: 35px;
-            font-size: 1rem;
-        }
-
-        .abstract h2, .disclaimer h2, .tldr h2 {
-            margin-top: 0;
-            font-size: 1.15rem;
-            color: var(--text-color);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .flow {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .flow-step {
-            border: 1px solid var(--border-color);
-            background: #ffffff;
-            border-radius: 999px;
-            padding: 6px 10px;
-            font-weight: 600;
-            color: var(--text-color);
-        }
-
-        .flow-arrow {
-            color: var(--accent-blue);
-            font-weight: 700;
-        }
-
-        h2.section-title {
-            font-size: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: var(--text-color);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .card {
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            overflow: hidden;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .img-wrapper {
-            background: #fafafa;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            background: #ffffff;
-        }
-
-        .figure-caption {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 8px;
-            text-align: left;
-        }
-
-        .card-content {
-            padding: 20px;
-            flex-grow: 1;
-        }
-
-        .card-content h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-            color: var(--accent-blue);
-        }
-
-        .card-content p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        .list-panel {
-            background-color: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
-            margin-top: 25px;
-        }
-
-        .list-panel ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        .list-panel li {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-            color: var(--text-color);
-        }
-
-        .references {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .references li {
-            margin-bottom: 12px;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metallophyte-Armor — Copper capture in monitored timber</title>
+  <meta name="description" content="An evidence-aware concept proposal for capturing copper from contaminated soil in monitored, harvestable inner wood.">
+  <meta name="theme-color" content="#643815">
+  <link rel="canonical" href="https://pinterittejeden-gif.github.io/metallophyte-armor/">
+  <meta property="og:title" content="Metallophyte-Armor">
+  <meta property="og:description" content="A pine-based concept for capturing copper already present in contaminated soil in monitored inner wood.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pinterittejeden-gif.github.io/metallophyte-armor/">
+  <link rel="stylesheet" href="../pinterittejeden-gif/research.css?v=1.2">
 </head>
-<body>
+<body class="theme-metal">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="proposal-shell">
+    <nav class="proposal-nav" aria-label="Proposal navigation">
+      <a href="https://pinterittejeden-gif.github.io/pinterittejeden-gif/">← BIOFOLIO</a>
+      <span class="status-pill">Concept proposal · not validated</span>
+    </nav>
 
-<div class="container">
-    <a class="back-home" href="https://pinterittejeden-gif.github.io/pinterittejeden-gif/">
-        ← Back to main page
-    </a>
-
-    <header>
-        <h1>Project Metallophyte-Armor: Genetic Biomineralization in Silvo-Architecture</h1>
-        <div class="meta-data">Conceptual Research Proposal & Material Systems Overview // Organism Model: <em>Pinus</em> species</div>
-    </header>
-
-    <div class="disclaimer">
-        <h2>Project Status</h2>
-        <p>This is a hypothetical synthetic biology and material-science project for portfolio and educational use. Metallophyte-Armor has not been engineered, grown, tested, or validated by me. The figures are reference visuals or concept placeholders. The numbered citations connect the text and captions to supporting literature, but the images are not experimental data from this project.</p>
-    </div>
-
-    <div class="tldr">
-        <h2>Mechanism Summary</h2>
-        <p>Metallophyte-Armor is a pine-based material concept: take copper from already copper-rich soil, keep it buffered during active sapwood transport, then lock it into wood during the sapwood-to-heartwood transition, when older xylem rings stop moving water and become structural heartwood [1,2,8].</p>
-        <div class="flow">
-            <span class="flow-step">Copper-enriched soil</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">Root uptake</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">Chelated sapwood transport</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">Heartwood transition</span>
-            <span class="flow-arrow">→</span>
-            <span class="flow-step">Mineralized inner timber</span>
-        </div>
-    </div>
-
-    <div class="abstract">
-        <h2>Abstract</h2>
-        <p>Timber is useful for lower-carbon construction, but outdoor wood still has problems: fungal decay, insect boring, moisture damage, and long-term maintenance. Copper-based preservatives can protect lumber after harvest, but they come with leaching, worker exposure, disposal, and accidental-burning concerns [6,7]. Metallophyte-Armor explores a different route: a <em>Pinus</em>-based system grown on controlled copper-rich sites, where part of the absorbed copper is eventually locked into the inner structural wood [1,2].</p>
-        <p>The key fix is heartwood-transition targeting. Active sapwood is plumbing: water moves upward toward the canopy, so dissolved copper in xylem sap could ride that stream into needles and return to the soil through needle drop. This concept avoids that by making the biomineralization peptide most active during the sapwood-to-heartwood transition, when older xylem rings stop transporting water and become inner structural wood [8]. Copper toxicity is treated as a transport problem from the start. Free Cu<sup>2+</sup> would need to stay buffered by metal-binding and detoxification systems until immobilization [3,4,5]. The target outcome is copper-enriched heartwood that is less friendly to fungi and wood-boring insects, with possible gains in density or compression behavior. Since a tree may naturally select against expensive copper loading, the trait would need restricted transition-zone expression, repeated screening, and staged testing instead of assuming it stays stable forever.</p>
-    </div>
-
-    <h2 class="section-title">Methodological Specifications</h2>
-    <div class="grid">
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="1.png" alt="Wood xylem microstructure reference image">
-                <div class="figure-caption">Figure 1. Wood xylem and tracheid microstructure used as a reference for sapwood transport and later heartwood-transition mineral deposition [8].</div>
-            </div>
-            <div class="card-content">
-                <h3>1. Vascular Transport & Heartwood Capture</h3>
-                <p>The first step is not “put copper anywhere in xylem.” Active sapwood moves water to the canopy, so precipitating copper too early could push it toward needles. Metallophyte-Armor narrows the target to the sapwood-to-heartwood transition zone and uses xylem anatomy as a timing gate [8]. During root uptake and sapwood transport, metal-binding and detoxification systems would keep copper buffered and reduce free-ion toxicity [3,4,5]. The copper-binding peptide would become active as transition-zone tissue matures, locking copper into inner wood after transport activity drops instead of sending it broadly into foliar tissue.</p>
-            </div>
+    <main id="main">
+      <header class="proposal-hero">
+        <div>
+          <p class="eyebrow">Plant biomaterials · Project 03</p>
+          <h1>Metallophyte-Armor</h1>
+          <p class="proposal-dek">Could copper already present in contaminated soil be transported in a buffered form and preferentially immobilized in monitored, harvestable inner wood?</p>
+          <div class="proposal-meta" role="group" aria-label="Project characteristics">
+            <span class="tag">Phytoremediation</span>
+            <span class="tag">Wood science</span>
+            <span class="tag">Lifecycle control</span>
+          </div>
         </div>
 
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="2.png" alt="Mineral or nanoparticle coating on wood structure">
-                <div class="figure-caption">Figure 2. Mineralized or particle-treated wood surface used as a visual reference for controlled deposition, surface densification, and copper-based preservation logic [6,7,8].</div>
-            </div>
-            <div class="card-content">
-                <h3>2. In-Vivo Crystallization</h3>
-                <p>Once copper reaches the heartwood-transition region, the goal is to immobilize it as copper-rich coordination complexes or small crystalline deposits inside the cellulose, hemicellulose, and lignin framework of the secondary cell wall. This is not bulk metallic copper. It is controlled fixation at low to moderate loading: enough to change the chemistry of inner timber, not enough to saturate needles, roots, or the whole tree. Deposition would be limited by transition-zone expression, copper availability, binding-site density, toxicity thresholds, and screening for trait loss caused by selection against expensive copper handling [3,4,5].</p>
-            </div>
+        <div class="system-diagram" role="img" aria-label="Concept flow from copper-rich soil through buffered root uptake and sapwood transport to targeted heartwood-transition capture and regulated harvest">
+          <div class="diagram-core">monitored copper capture</div>
+          <span class="diagram-node node-top">existing soil copper</span>
+          <span class="diagram-node node-right">buffered transport</span>
+          <span class="diagram-node node-bottom">transition-zone capture</span>
+          <span class="diagram-node node-left">harvest and controlled disposal</span>
+          <span class="diagram-caption">Original concept diagram · proposed mass flow, not measured performance</span>
+        </div>
+      </header>
+
+      <aside class="disclosure" aria-labelledby="disclosure-title">
+        <strong id="disclosure-title">What this page does—and does not—claim</strong>
+        <p>Metallophyte-Armor has not been engineered, grown, harvested, or tested by the author. The literature supports metal handling in plants, phytoremediation principles, copper-based wood preservation, and wood anatomy separately. It does not validate safe heartwood-targeted copper capture in pine.</p>
+      </aside>
+
+      <section class="proposal-section" aria-labelledby="boundary-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Evidence boundary</p>
+            <h2 id="boundary-title">The transport path is the project</h2>
+          </div>
+          <p>Copper resistance alone is not enough. The proposal succeeds only if copper remains buffered during uptake, avoids damaging accumulation in needles and roots, and becomes predictably immobilized in harvestable wood.</p>
         </div>
 
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="3.png" alt="Fungal colonization of wood reference image">
-                <div class="figure-caption">Figure 3. Fungal colonization of wood used as a reference for the biological degradation pathway targeted by copper-based defense [6,7].</div>
-            </div>
-            <div class="card-content">
-                <h3>3. Passive Invertebrate Deterrence & Antifungal Prophylaxis</h3>
-                <p>Copper compounds are already used in wood preservation because they can inhibit decay organisms under controlled treatment conditions [6,7]. Here, the same idea is moved into the growth phase: can copper-enriched heartwood make the wood less attractive to fungal hyphae and wood-boring insects? The expected effect is dose-dependent deterrence, not instant toxic shock or perfect sterilization. Testing would compare fungal growth, insect feeding, leaching, and copper distribution against untreated pine, normal heartwood, and conventional copper-treated lumber, while also watching for trees that suppress the copper-loading trait over time.</p>
-            </div>
+        <div class="boundary-grid">
+          <article class="boundary-card">
+            <span>Established basis</span>
+            <h3>Plants manage metals and copper can preserve wood</h3>
+            <p>Metal-tolerant plants, phytoremediation, chelation, sequestration, copper toxicology, and conventional copper wood preservatives provide evidence for individual components [1–7].</p>
+          </article>
+          <article class="boundary-card">
+            <span>Proposed bridge</span>
+            <h3>Delay immobilization until xylem exits transport service</h3>
+            <p>The concept proposes temporary copper buffering in active tissues followed by stronger binding during sapwood-to-heartwood transition [8].</p>
+          </article>
+          <article class="boundary-card">
+            <span>Critical unknowns</span>
+            <h3>Promoter discovery, mass balance, toxicity, and timescale</h3>
+            <p>No validated pine heartwood-transition promoter or engineered copper-binding system has been selected. Trees are slow, complex, and exposed to strong selection against costly traits.</p>
+          </article>
+          <article class="boundary-card">
+            <span>Minimum proof</span>
+            <h3>Quantified copper fate across every major tissue</h3>
+            <p>A study must close the copper mass balance across soil, roots, bark, sapwood, transition wood, heartwood, needles, litter, and leachate while maintaining plant health.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proposal-section" aria-labelledby="architecture-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">System architecture</p>
+            <h2 id="architecture-title">Buffer, target, bind, account</h2>
+          </div>
+          <p>“Copper-enriched wood” is not a sufficient specification. The chemical form, tissue distribution, loading range, leaching behavior, and end-of-life route must all be defined.</p>
         </div>
 
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="4.png" alt="Wood cell-wall structure reference image">
-                <div class="figure-caption">Figure 4. Wood cell-wall and tracheid microstructure used as a reference for evaluating mineral loading, mechanical reinforcement, and workability limits [8].</div>
-            </div>
-            <div class="card-content">
-                <h3>4. Mechanical Reinforcement & Material Yield</h3>
-                <p>The mechanical question is whether small amounts of mineral deposition inside heartwood cell walls could improve compression, indentation resistance, or dimensional stability without ruining workability. Pine strength depends on tracheid orientation, cell-wall thickness, density, moisture content, and microfibril angle [8]. Metallophyte-Armor treats copper deposition as a limited densifying phase inside that structure. The loading cap matters: too much copper could make the wood brittle, hard on tools, more conductive, or harder to dispose of. The target is modified timber, not a metal-filled composite.</p>
-            </div>
+        <div class="mechanism-grid">
+          <article class="mechanism-card">
+            <span>01 · Site and uptake</span>
+            <h3>Use copper already present at controlled sites</h3>
+            <p>The intended context is monitored phytoremediation on copper-affected land, not copper addition to ordinary forests. Soil chemistry and bioavailability would determine whether plant uptake is plausible [1,2].</p>
+          </article>
+          <article class="mechanism-card">
+            <span>02 · Temporary buffering</span>
+            <h3>Reduce free-ion exposure during transport</h3>
+            <p>Phytochelatin-like ligands, metallothionein-like binding, and vacuolar sequestration are candidate principles for reducing free Cu²⁺ toxicity, not yet a selected engineered pathway [3–5].</p>
+          </article>
+          <article class="mechanism-card">
+            <span>03 · Transition targeting</span>
+            <h3>Discover a tissue program before designing the switch</h3>
+            <p>Transcriptomic comparison of active sapwood and transition tissues would be required to identify candidate regulatory elements. Heartwood targeting is currently the largest speculative step [8].</p>
+          </article>
+          <article class="mechanism-card">
+            <span>04 · Material and lifecycle</span>
+            <h3>Test the product as treated wood</h3>
+            <p>Harvested material would require copper speciation, leaching, strength, machining dust, conductivity, fire, smoke, ash, labeling, recovery, and no-burn disposal studies [6–8].</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="proposal-section" aria-labelledby="metrics-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Preliminary design gates</p>
+            <h2 id="metrics-title">Close the mass balance before claiming a material</h2>
+          </div>
+          <p>These proposed gates frame an early feasibility program. They are not measured properties and must be adjusted for the chosen pine species and site.</p>
         </div>
 
-    </div>
+        <div class="metrics-wrap">
+          <table class="metrics">
+            <thead><tr><th>Measure</th><th>Minimum signal for continued development</th><th>Stop or redesign condition</th></tr></thead>
+            <tbody>
+              <tr><td>Plant health</td><td>At least 80% of matched-control biomass and photosynthetic performance at the intended exposure.</td><td>Chronic chlorosis, root injury, growth suppression, or reproductive damage at useful uptake levels.</td></tr>
+              <tr><td>Foliar exclusion</td><td>Needle copper remains below a pre-registered phytotoxic threshold and below untreated exposed controls.</td><td>Copper accumulates in needles or litter faster than it is captured in harvestable wood.</td></tr>
+              <tr><td>Target localization</td><td>At least a threefold concentration enrichment in the intended transition/inner-wood compartment relative to active sapwood.</td><td>Distribution remains diffuse or varies unpredictably between trees and seasons.</td></tr>
+              <tr><td>Copper accounting</td><td>At least 90% of recovered copper can be assigned to measured soil, tissue, litter, and leachate compartments.</td><td>Unexplained losses prevent environmental risk assessment.</td></tr>
+              <tr><td>Material retention</td><td>Leaching no worse than an appropriate commercial copper-treated-wood control under wet–dry cycling.</td><td>Mobile copper release offsets any remediation benefit.</td></tr>
+              <tr><td>Material performance</td><td>No more than 10% loss in required strength or workability while showing a pre-registered biological-resistance benefit.</td><td>Brittleness, conductivity, tool wear, dust, or fire risk outweighs the useful effect.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-    <h2 class="section-title">Lifecycle Risk Mitigation Architecture</h2>
-    <div class="list-panel">
-        <p><strong>Design choices that keep the material useful without creating bigger ecological or architectural problems:</strong></p>
-        <ul>
-            <li><strong>Needle-Drop Copper Exclusion Through Heartwood Targeting:</strong> The original ecological risk is that copper dissolved in active xylem sap could be pulled into needles by transpiration and later returned to the soil through needle drop. Metallophyte-Armor addresses this by shifting the main immobilization target away from active sapwood and toward the sapwood-to-heartwood transition zone [8]. Copper would remain chemically buffered during transport, then become permanently bound as older xylem rings lose transport function and convert into structural heartwood. This does not eliminate the need for foliar copper monitoring, but it gives the design a clearer biological route for enriching harvestable timber without intentionally loading needles.</li>
+      <section class="proposal-section" aria-labelledby="controls-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Risk controls</p>
+            <h2 id="controls-title">Treat every copper pathway as a liability pathway</h2>
+          </div>
+          <p>Needle fall, leaching, machining dust, accidental burning, and demolition waste are part of the same system as uptake and wood formation.</p>
+        </div>
 
-            <li><strong>Chelated Sapwood Transport Protection:</strong> Because free Cu<sup>2+</sup> can damage chlorophyll, photosynthesis, and enzyme systems, copper movement would require a temporary detoxification pathway before final deposition [3]. The concept uses phytochelatin-like ligands, metallothionein-like binding proteins, and vacuolar sequestration to keep copper buffered during root uptake and sapwood transport [4,5]. Copper would remain chemically bound until it reaches tissues entering the heartwood-transition program, where the engineered biomineralization peptide captures and immobilizes it in the cell-wall framework.</li>
+        <div class="control-grid">
+          <article class="control-card"><span>Environment</span><h3>Controlled contaminated sites only</h3><p>Do not introduce copper or engineered trees into normal forests; monitor soil, litter, runoff, and neighboring vegetation.</p></article>
+          <article class="control-card"><span>Biology</span><h3>Multiple limits, not one genetic switch</h3><p>Use reproductive containment, trait-stability monitoring, and removal criteria rather than assuming a costly engineered pathway will remain stable.</p></article>
+          <article class="control-card"><span>Processing</span><h3>Specialized material handling</h3><p>Characterize saw-blade wear, cutting forces, airborne dust, fasteners, resistivity, and finishing before architectural use.</p></article>
+          <article class="control-card"><span>End of life</span><h3>Label, recover, and never burn casually</h3><p>Route offcuts and demolition waste through treated-wood recovery or regulated disposal; measure smoke and ash hazards [6,7].</p></article>
+        </div>
+      </section>
 
-            <li><strong>Controlled Copper Supply Strategy:</strong> This is not meant for ordinary forests or copper-poor soils. The realistic use case is controlled phytoremediation on copper-contaminated land, mine-adjacent sites, or managed plantations where copper is already elevated [1,2]. Instead of adding copper salts every season, the tree acts as a slow recovery system that moves existing contamination into monitored, harvestable biomass.</li>
+      <section class="proposal-section" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Validation roadmap</p>
+            <h2 id="roadmap-title">Start with molecules, not mature trees</h2>
+          </div>
+          <p>The slow timescale of pine makes early rejection tests essential before any long-duration growth study.</p>
+        </div>
 
-            <li><strong>Moderated Mineral Loading:</strong> The material goal is not unlimited copper saturation. Excessive biomineralization could make the wood brittle, conductive, difficult to cut, or toxic at end of life. For that reason, the system is framed around a controlled loading window: high enough to alter biological resistance and local density, but low enough to preserve lumber workability and avoid continuous conductive pathways [6,7,8]. This loading window also works as an evolutionary-stability filter: plants that suppress copper capture, over-accumulate copper, or redirect copper into foliage would be removed from the design path rather than treated as successful variants.</li>
-
-            <li><strong>Machinability Control:</strong> Mineralized timber would be processed as a specialized biological composite rather than ordinary pine. Before architectural use, saw-blade wear, dust composition, cutting forces, fastener behavior, and surface finishing would be tested against standard wood behavior [8]. If copper loading increases tool damage, the material would be restricted to prefabricated panels, small engineered components, or specialized mills using carbide or diamond-tipped tooling.</li>
-
-            <li><strong>Electrical Conductivity Barrier:</strong> Copper deposition would be targeted as discontinuous micro-crystalline or coordination-complex domains rather than a connected metallic network. This reduces the likelihood of electrical conduction across the timber body. Resistivity testing under dry, humid, and water-saturated conditions would be required before any use near wiring, lightning exposure, embedded electronics, or conductive fasteners.</li>
-
-            <li><strong>No-Burn End-of-Life Pathway:</strong> Copper-enriched wood would not be treated as ordinary burnable biomass. The proposed lifecycle plan requires visible labeling, no-burn disposal rules, dust control during machining, and routing into treated-wood recovery or regulated disposal streams, consistent with the handling concerns already associated with copper-based treated wood [6,7]. Offcuts and demolition waste would be handled like copper-treated material rather than firewood, preventing copper-laden smoke, ash, and particulate release.</li>
-        </ul>
-    </div>
-
-    <h2 class="section-title">Proposed Phased Testing</h2>
-    <div class="list-panel">
-        <p><strong>Development pathway for validating the concept before any architectural use:</strong></p>
-        <ul>
-            <li><strong>Phase 1 - Bench-Scale Peptide Validation:</strong> Test the proposed copper-binding peptide outside a living plant system to measure Cu<sup>2+</sup> affinity, binding stability, precipitation behavior, and compatibility with cellulose or lignin-like substrates.</li>
-
-            <li><strong>Phase 2 - Model Plant Screening:</strong> Evaluate copper transport and toxicity behavior in a fast-growing model plant before attempting pine. Screening would focus on copper localization, leaf accumulation, chlorophyll loss, oxidative stress, root damage, and whether engineered binding reduces free-ion toxicity.</li>
-
-            <li><strong>Phase 3 - Sapwood Transport and Foliar Exclusion Trials:</strong> Test controlled copper uptake in young <em>Pinus</em> seedlings or saplings under low, moderate, and high copper exposure. The key success criterion at this stage is safe transport behavior: limited needle accumulation, maintained photosynthesis, and no lethal growth suppression.</li>
-
-            <li><strong>Phase 4 - Heartwood-Transition Targeting Study:</strong> In older saplings or stem sections capable of showing transition-zone behavior, evaluate whether copper-binding activity can be biased toward tissues entering the sapwood-to-heartwood program. This phase would measure copper distribution across bark, sapwood, transition wood, heartwood, needles, roots, and shed litter.</li>
-
-            <li><strong>Phase 5 - Material Characterization:</strong> Harvest small stem sections and test density, compression, brittleness, moisture behavior, electrical resistivity, cutting resistance, dust composition, and copper leaching under wet-dry cycling.</li>
-
-            <li><strong>Phase 6 - Biological Resistance Testing:</strong> Compare mineralized heartwood sections against untreated pine and conventional copper-treated controls using fungal colonization assays and wood-boring insect feeding or avoidance tests.</li>
-
-            <li><strong>Phase 7 - Processing and End-of-Life Review:</strong> Assess sawmill compatibility, fire behavior, smoke chemistry, ash toxicity, labeling requirements, no-burn handling rules, and disposal classification before any claim of ecological or architectural viability.</li>
-        </ul>
-    </div>
-
-    <h2 class="section-title">References</h2>
-    <div class="list-panel references">
-        <ol>
-            <li>Alford, É. R., Pilon-Smits, E. A. H., & Paschke, M. W. “Metallophytes: A View from the Rhizosphere.” <em>Plant and Soil</em>, 2010. <a href="https://doi.org/10.1007/s11104-010-0442-3" target="_blank">https://doi.org/10.1007/s11104-010-0442-3</a></li>
-
-            <li>Awa, S. H., & Hadibarata, T. “Removal of Heavy Metals in Contaminated Soil by Phytoremediation Mechanism: A Review.” <em>Water, Air, & Soil Pollution</em>, 2020. <a href="https://doi.org/10.1007/s11270-020-4426-0" target="_blank">https://doi.org/10.1007/s11270-020-4426-0</a></li>
-
-            <li>Yruela, I. “Copper in Plants.” <em>Brazilian Journal of Plant Physiology</em>, 2005. <a href="https://doi.org/10.1590/S1677-04202005000100012" target="_blank">https://doi.org/10.1590/S1677-04202005000100012</a></li>
-
-            <li>Hall, J. L. “Cellular Mechanisms for Heavy Metal Detoxification and Tolerance.” <em>Journal of Experimental Botany</em>, 2002. <a href="https://doi.org/10.1093/jexbot/53.366.1" target="_blank">https://doi.org/10.1093/jexbot/53.366.1</a></li>
-
-            <li>Cobbett, C. S. “Phytochelatins and Their Roles in Heavy Metal Detoxification.” <em>Plant Physiology</em>, 2000. <a href="https://doi.org/10.1104/pp.123.3.825" target="_blank">https://doi.org/10.1104/pp.123.3.825</a></li>
-
-            <li>Lebow, S. T. “Alternatives to Chromated Copper Arsenate for Residential Construction.” USDA Forest Products Laboratory, 2004. <a href="https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf" target="_blank">https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf</a></li>
-
-            <li>Freeman, M. H., & McIntyre, C. R. “A Comprehensive Review of Copper-Based Wood Preservatives.” <em>Forest Products Journal</em>, 2008.</li>
-
-            <li>Forest Products Laboratory. <em>Wood Handbook: Wood as an Engineering Material</em>. USDA Forest Service, General Technical Report FPL-GTR-190. <a href="https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr190.pdf" target="_blank">https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr190.pdf</a></li>
+        <ol class="roadmap">
+          <li><h3>Ligand and speciation screen</h3><p>Compare candidate copper binders for affinity, release, precipitation, oxidation state, and compatibility with lignocellulosic substrates.</p></li>
+          <li><h3>Model-plant toxicity</h3><p>Quantify localization, chlorophyll, oxidative stress, root damage, and free-ion buffering in a faster experimental chassis.</p></li>
+          <li><h3>Pine tissue discovery</h3><p>Map expression and chemistry across bark, cambium, sapwood, transition wood, heartwood, roots, and needles.</p></li>
+          <li><h3>Targeting feasibility</h3><p>Test whether candidate regulatory elements can bias binding activity toward tissues entering the heartwood program.</p></li>
+          <li><h3>Material characterization</h3><p>Measure copper form, distribution, leaching, strength, moisture, workability, conductivity, fire behavior, and biological resistance.</p></li>
+          <li><h3>Lifecycle assessment</h3><p>Compare total remediation benefit, land use, time, processing hazards, recovery, and disposal against existing alternatives.</p></li>
         </ol>
-    </div>
+      </section>
 
-    <footer>
-        another trophy to my portfolio ig <br>
-        <span style="font-size: 0.75rem; color: #afb5bb;">Pinteritte - conceptual research proposal, writing, and website by me.</span>
+      <section class="proposal-section" aria-labelledby="references-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Literature</p>
+            <h2 id="references-title">References</h2>
+          </div>
+          <p>References support component mechanisms and safety context. None demonstrates the proposed pine targeting system.</p>
+        </div>
+
+        <ol class="references">
+          <li>Alford, É. R., Pilon-Smits, E. A. H., &amp; Paschke, M. W. “Metallophytes: A View from the Rhizosphere.” <em>Plant and Soil</em>, 2010. <a href="https://doi.org/10.1007/s11104-010-0482-3" target="_blank" rel="noopener noreferrer">DOI</a></li>
+          <li>Awa, S. H., &amp; Hadibarata, T. “Removal of Heavy Metals in Contaminated Soil by Phytoremediation Mechanism: A Review.” <em>Water, Air, &amp; Soil Pollution</em>, 2020. <a href="https://doi.org/10.1007/s11270-020-4426-0" target="_blank" rel="noopener noreferrer">DOI</a></li>
+          <li>Yruela, I. “Copper in Plants.” <em>Brazilian Journal of Plant Physiology</em>, 2005. <a href="https://doi.org/10.1590/S1677-04202005000100012" target="_blank" rel="noopener noreferrer">DOI</a></li>
+          <li>Hall, J. L. “Cellular Mechanisms for Heavy Metal Detoxification and Tolerance.” <em>Journal of Experimental Botany</em>, 2002. <a href="https://doi.org/10.1093/jexbot/53.366.1" target="_blank" rel="noopener noreferrer">DOI</a></li>
+          <li>Cobbett, C. S. “Phytochelatins and Their Roles in Heavy Metal Detoxification.” <em>Plant Physiology</em>, 2000. <a href="https://doi.org/10.1104/pp.123.3.825" target="_blank" rel="noopener noreferrer">DOI</a></li>
+          <li>Lebow, S. T. “Alternatives to Chromated Copper Arsenate for Residential Construction.” USDA Forest Products Laboratory, 2004. <a href="https://www.fpl.fs.usda.gov/documnts/fplrp/fplrp618.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
+          <li>Freeman, M. H., &amp; McIntyre, C. R. “A Comprehensive Review of Copper-Based Wood Preservatives.” <em>Forest Products Journal</em>, 2008.</li>
+          <li>Forest Products Laboratory. <em>Wood Handbook: Wood as an Engineering Material</em>. USDA Forest Service, FPL-GTR-190. <a href="https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr190.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
+        </ol>
+        <p class="source-note">Visual provenance: every visual on this page is an original HTML/CSS concept diagram created for BIOFOLIO. No third-party image assets are used.</p>
+      </section>
+    </main>
+
+    <footer class="proposal-footer">
+      <p>Metallophyte-Armor · Concept proposal by Pinteritte · Version 1.1, 2026</p>
+      <div><a href="README.md">Project notes</a><a href="LICENSE.md">License</a><a href="#main">Top ↑</a></div>
     </footer>
-</div>
-
+  </div>
 </body>
 </html>
