@@ -100,6 +100,9 @@ body.theme-metal {
 .theme-metal .roadmap h3 { margin-top: 4rem; font-family: "Arial Narrow", Arial, sans-serif; font-size: 1.12rem; font-weight: 900; text-transform: uppercase; }
 .theme-metal .roadmap p { color: var(--muted); font-family: Georgia, serif; }
 .theme-metal .source-note { border: 2px solid var(--ink); border-left: 10px solid var(--accent); border-radius: 0; color: var(--ink); background: var(--surface); transform: none; }
+.theme-metal .inline-citation { color: var(--accent-ink); font-family: ui-monospace, monospace; font-size: .82em; font-style: normal; font-weight: 900; white-space: nowrap; }
+.theme-metal .references li { scroll-margin-top: 2rem; }
+.theme-metal .references li:target { outline: 2px solid var(--accent); outline-offset: .35rem; background: var(--surface); }
 .theme-metal .proposal-footer { color: var(--ink); text-transform: uppercase; }
 
 @media (max-width: 980px) {
